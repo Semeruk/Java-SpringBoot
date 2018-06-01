@@ -17,4 +17,8 @@ public class EventService {
         return eventDao.getAllEvents();
     }
 
+    public Event getEventById(int id) {
+        return eventDao.getEventById(id);
+    }
+
 }

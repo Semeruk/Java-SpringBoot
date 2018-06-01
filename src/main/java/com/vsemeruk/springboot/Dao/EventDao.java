@@ -30,4 +30,8 @@ public class EventDao {
     public Collection<Event> getAllEvents() {
         return this.events.values();
     }
+
+    public Event getEventById(int id) {
+        return this.events.get(id);
+    }
 }
