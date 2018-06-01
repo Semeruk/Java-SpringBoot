@@ -27,4 +27,9 @@ public class EventController {
     public Event getEventById(@PathVariable("id") int id) {
         return eventService.getEventById(id);
     }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public String deleteById(@PathVariable("id") int id) {
+        return eventService.deleteEventById(id);
+    }
 }

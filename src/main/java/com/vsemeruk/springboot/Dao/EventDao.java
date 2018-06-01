@@ -34,4 +34,13 @@ public class EventDao {
     public Event getEventById(int id) {
         return this.events.get(id);
     }
+
+    public String deleteEventById(int id) {
+        if(events.get(id) != null) {
+            this.events.remove(id);
+            return "Deleted successful!";
+        } else {
+            return "Failed, you specified wrong id!";
+        }
+    }
 }

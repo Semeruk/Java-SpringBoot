@@ -21,4 +21,8 @@ public class EventService {
         return eventDao.getEventById(id);
     }
 
+    public String deleteEventById(int id) {
+        return eventDao.deleteEventById(id);
+    }
+
 }
