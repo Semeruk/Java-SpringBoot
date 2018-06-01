@@ -1,11 +1,13 @@
 package com.vsemeruk.springboot.Dao;
 
 import com.vsemeruk.springboot.Entity.Event;
+import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+@Repository
 public class EventDao {
 
     private static Map<Integer, Event> events;
