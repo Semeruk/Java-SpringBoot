@@ -52,7 +52,7 @@ public class EventDao {
 
             return "Update successful!";
         } else {
-            return "Fail, there is no such event!";
+            return "Failed, there is no such event!";
         }
     }
 
