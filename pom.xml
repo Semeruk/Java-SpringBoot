@@ -9,12 +9,14 @@
     <version>1.0-SNAPSHOT</version>
 
     <!-- Spring Boot start -->
+    <!-- The parent section considers what version of dependencies to download -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.0.2.RELEASE</version>
     </parent>
 
+    <!-- This dependency tells Maven what jars to download -->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
