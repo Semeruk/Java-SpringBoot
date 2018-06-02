@@ -25,4 +25,12 @@ public class EventService {
         return eventDao.deleteEventById(id);
     }
 
+    public String updateEvent(Event event) {
+        return eventDao.updateEvent(event);
+    }
+
+    public String addEvent(Event event) {
+        return eventDao.addEvent(event);
+    }
+
 }

@@ -3,10 +3,8 @@ package com.vsemeruk.springboot.Controller;
 import com.vsemeruk.springboot.Entity.Event;
 import com.vsemeruk.springboot.Service.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
@@ -31,5 +29,15 @@ public class EventController {
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public String deleteById(@PathVariable("id") int id) {
         return eventService.deleteEventById(id);
+    }
+
+    @RequestMapping(method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
+    public String updateEvent(@RequestBody Event event) {
+        return eventService.updateEvent(event);
+    }
+
+    @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    public String addEvent(@RequestBody Event event) {
+        return eventService.addEvent(event);
     }
 }

@@ -36,11 +36,35 @@ public class EventDao {
     }
 
     public String deleteEventById(int id) {
-        if(events.get(id) != null) {
+        if (events.get(id) != null) {
             this.events.remove(id);
             return "Deleted successful!";
         } else {
             return "Failed, you specified wrong id!";
+        }
+    }
+
+    public String updateEvent(Event event) {
+
+        if (events.get(event.getId()) != null) {
+
+            events.put(event.getId(), event);
+
+            return "Update successful!";
+        } else {
+            return "Fail, there is no such event!";
+        }
+    }
+
+    public String addEvent(Event event) {
+
+        if (event != null) {
+
+            events.put(event.getId(), event);
+
+            return "Insert successful!";
+        } else {
+            return "Failed!";
         }
     }
 }
